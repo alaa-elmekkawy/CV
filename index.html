@@ -3,566 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaa Elmekkawy, PMP - Project Manager</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Alaa Elmekkawy - Professional CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background: linear-gradient(135deg, #1a2a6c, #2a5298);
-            color: #333;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
         }
-        
-        .resume-container {
-            max-width: 1200px;
-            margin: 30px auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(90deg, #0c2461, #1e3799);
-            color: white;
-            padding: 40px 50px;
-            position: relative;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .name-title h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .name-title h2 {
-            font-size: 26px;
-            font-weight: 400;
-            opacity: 0.9;
-        }
-        
-        .pmp-badge {
-            background: #FFD700;
-            color: #0c2461;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 18px;
-            display: inline-flex;
-            align-items: center;
-            margin-top: 15px;
-        }
-        
-        .contact-info {
-            text-align: right;
-        }
-        
-        .contact-info div {
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-        
-        .contact-info i {
-            width: 30px;
-            color: #FFD700;
-        }
-        
-        .main-content {
-            display: flex;
-            padding: 0;
-        }
-        
-        .left-column {
-            flex: 1;
-            background: #f8f9fa;
-            padding: 40px;
-        }
-        
-        .right-column {
-            flex: 2;
-            padding: 40px;
-            border-left: 1px solid #eaeaea;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
         .section-title {
-            color: #0c2461;
-            font-size: 26px;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #1e3799;
-            display: flex;
-            align-items: center;
+            border-bottom: 3px solid #3B82F6;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
         }
-        
-        .section-title i {
-            margin-right: 12px;
-            color: #1e3799;
-        }
-        
-        .summary-text {
-            font-size: 18px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .skill-category {
-            margin-bottom: 25px;
-        }
-        
-        .skill-category h3 {
-            color: #1e3799;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-        
-        .skill-item {
-            background: white;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid #1e3799;
-            transition: transform 0.3s;
-        }
-        
-        .skill-item:hover {
-            transform: translateX(5px);
-            border-left: 4px solid #FFD700;
-        }
-        
         .experience-item {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px dashed #ddd;
-        }
-        
-        .company-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .company-name {
-            font-size: 22px;
-            color: #0c2461;
-            font-weight: 700;
-        }
-        
-        .company-period {
-            font-size: 18px;
-            color: #1e3799;
-            font-weight: 600;
-        }
-        
-        .job-title {
-            font-size: 20px;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .project-item {
-            margin-bottom: 20px;
-        }
-        
-        .project-title {
-            font-weight: 700;
-            color: #1e3799;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-        
-        .project-details {
-            margin-left: 20px;
-        }
-        
-        .project-details li {
-            margin-bottom: 8px;
-            position: relative;
+            border-left: 3px solid #E5E7EB;
             padding-left: 20px;
+            margin-bottom: 32px;
+            position: relative;
         }
-        
-        .project-details li:before {
-            content: "•";
-            color: #1e3799;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .education-item {
-            display: flex;
-            margin-bottom: 25px;
-            align-items: flex-start;
-        }
-        
-        .edu-icon {
-            background: #1e3799;
-            color: white;
-            width: 50px;
-            height: 50px;
+        .experience-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #3B82F6;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
+            position: absolute;
+            left: -7.5px;
+            top: 8px;
         }
-        
-        .edu-details {
-            flex: 1;
-        }
-        
-        .edu-title {
-            font-weight: 700;
-            font-size: 20px;
-            color: #0c2461;
-            margin-bottom: 5px;
-        }
-        
-        .edu-sub {
-            font-size: 18px;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        
-        .edu-project {
-            font-style: italic;
-            color: #555;
-        }
-        
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 14px 30px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        
-        .btn-download {
-            background: #1e3799;
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border: 2px solid #1e3799;
-        }
-        
-        .btn-download:hover {
-            background: #0c2461;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-print {
-            background: #FFD700;
-            color: #0c2461;
-            border: 2px solid #FFD700;
-        }
-        
-        .btn-print:hover {
-            background: #e6c200;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        @media (max-width: 900px) {
-            .main-content {
-                flex-direction: column;
-            }
-            
-            .right-column {
-                border-left: none;
-                border-top: 1px solid #eaeaea;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .contact-info {
-                text-align: center;
-                margin-top: 25px;
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .resume-container {
-                box-shadow: none;
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            .action-buttons {
-                display: none;
-            }
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin: 4px;
         }
     </style>
 </head>
-<body>
-    <div class="resume-container">
-        <header>
-            <div class="header-content">
-                <div class="name-title">
-                    <h1>ALAA ELMEKKAWY, PMP</h1>
-                    <h2>Project Manager / Civil Engineer</h2>
-                    <div class="pmp-badge">
-                        <i class="fas fa-award"></i> PMP Certified #1908392
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div><i class="fas fa-envelope"></i> enq.alaa.ae@gmail.com</div>
-                    <div><i class="fas fa-phone"></i> +2 01002003109</div>
-                    <div><i class="fas fa-globe"></i> Egyptian National</div>
-                </div>
-            </div>
-        </header>
-        
-        <div class="main-content">
-            <div class="left-column">
-                <div class="section">
-                    <h3 class="section-title"><i class="fas fa-user-tie"></i> Professional Summary</h3>
-                    <p class="summary-text">
-                        Accomplished PMP®-certified Project Manager and Civil Engineer with 20+ years of expertise leading multi-million-dollar construction projects across UAE, Saudi Arabia, and Egypt. Proven ability to deliver complex residential, industrial, petrochemical, and water treatment infrastructure projects on time, within budget, and adhering to stringent quality and safety standards.
-                    </p>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title"><i class="fas fa-star"></i> Core Competencies</h3>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h3>Project Management</h3>
-                            <div class="skill-item">Project Lifecycle Management</div>
-                            <div class="skill-item">Budget Control & Cost Optimization</div>
-                            <div class="skill-item">Risk Identification & Mitigation</div>
-                            <div class="skill-item">Stakeholder Engagement</div>
-                            <div class="skill-item">Team Leadership & Development</div>
+<body class="bg-gray-50 text-gray-800">
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl">
+        <!-- Header Section -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">ALAA MOHAMMED RAMADAN ELMEKKAWY</h1>
+                    <p class="text-xl text-blue-100 mb-4">Civil Engineer & Project Manager, PMP</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate mr-2"></i>
+                            <span>PMP #1908392</span>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3>Technical Expertise</h3>
-                            <div class="skill-item">Residential & Industrial Construction</div>
-                            <div class="skill-item">Petrochemical Facilities</div>
-                            <div class="skill-item">Wastewater Treatment Plants</div>
-                            <div class="skill-item">Piling & Foundation Systems</div>
-                            <div class="skill-item">Structural Engineering</div>
+                        <div class="flex items-center">
+                            <i class="fas fa-flag mr-2"></i>
+                            <span>Egyptian National</span>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3>Software Skills</h3>
-                            <div class="skill-item">Primavera P6</div>
-                            <div class="skill-item">AutoCAD</div>
-                            <div class="skill-item">Revit</div>
-                            <div class="skill-item">MS Office Suite</div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Additional</h3>
-                            <div class="skill-item">Health, Safety & Environment (HSE)</div>
-                            <div class="skill-item">Quality Assurance (QA/QC)</div>
-                            <div class="skill-item">Procurement & Contract Management</div>
-                            <div class="skill-item">Bilingual (English & Arabic)</div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>20+ Years Experience</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="section">
-                    <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Credentials</h3>
-                    <div class="education-item">
-                        <div class="edu-icon">
-                            <i class="fas fa-certificate"></i>
+                <div class="mt-4 md:mt-0 text-right">
+                    <div class="flex items-center justify-end">
+                        <i class="fab fa-linkedin mr-2"></i>
+                        <span>linkedin.com/in/alaaelmekkawy</span>
+                    </div>                    
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center justify-end">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>eng.alaa.ae@gmail.com</span>
                         </div>
-                        <div class="edu-details">
-                            <div class="edu-title">Project Management Professional (PMP®)</div>
-                            <div class="edu-sub">Project Management Institute (PMI)</div>
-                            <div class="edu-project">Certification #1908392</div>
+                        <div class="flex items-center justify-end">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+20 1002003109</span>
                         </div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="edu-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="edu-details">
-                            <div class="edu-title">Bachelor of Science, Civil Engineering</div>
-                            <div class="edu-sub">Mansoura University, Egypt | 2003</div>
-                            <div class="edu-project">Graduation Project: Design of Steel Structure (Graded: Excellent)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="right-column">
-                <div class="section">
-                    <h3 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h3>
-                    
-                    <div class="experience-item">
-                        <div class="company-header">
-                            <div class="company-name">DAR ALSHARQ CONTRACTING AND SUPPLYING</div>
-                            <div class="company-period">July 2017 – Present</div>
-                        </div>
-                        <div class="job-title">Project Manager | Egypt</div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">8-Floor Residential Building (New Cairo)</div>
-                            <ul class="project-details">
-                                <li>Led civil construction for 800m² Armed Forces-supervised project</li>
-                                <li>Managed delivery of basement, ground floor, and six typical floors</li>
-                                <li>Ensured strict compliance with military specifications and quality standards</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">General Civil Works Portfolio</div>
-                            <ul class="project-details">
-                                <li>Directed diverse civil and MEP activities across New Capital and New Mansoura City</li>
-                                <li>Oversaw concrete structures, masonry, plastering, tiling, and finishing works</li>
-                                <li>Optimized resource allocation and timelines for multiple concurrent projects</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="company-header">
-                            <div class="company-name">RMCO (RABIGH MODERN CONTRACTING)</div>
-                            <div class="company-period">April 2012 – July 2017</div>
-                        </div>
-                        <div class="job-title">Project Manager / Senior Project Engineer | KSA</div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">Wastewater Treatment Plant (WWTP) - Petro Rabigh</div>
-                            <ul class="project-details">
-                                <li>Executed civil construction for WWTP with 6,600 m³ concrete basins</li>
-                                <li>Managed construction of clarifiers, thickeners, DAF units, and pipe supports</li>
-                                <li>Ensured adherence to stringent petrochemical safety and quality protocols</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">Petro Rabigh Main Entrance & Facilities</div>
-                            <ul class="project-details">
-                                <li>Managed construction of main entrance complex and security building</li>
-                                <li>Oversaw development of new asphalt roads/parking and safety fencing</li>
-                                <li>Delivered all facilities to exact client specifications and timelines</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="company-header">
-                            <div class="company-name">EMCO BLDG. CONT.</div>
-                            <div class="company-period">December 2007 – March 2012</div>
-                        </div>
-                        <div class="job-title">Project Engineer | UAE</div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">Gallery Villas, Dubai Sports City (50 Units)</div>
-                            <ul class="project-details">
-                                <li>Oversaw end-to-end construction of 50 luxury villas</li>
-                                <li>Managed civil works, MEP installations, and high-end finishing</li>
-                                <li>Coordinated landscaping to meet Dubai Sports City standards</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">UAE Armed Forces Facilities (Multiple Sites)</div>
-                            <ul class="project-details">
-                                <li>Coordinated construction of critical infrastructure across secure military sites</li>
-                                <li>Managed development of headquarters, accommodation blocks, and offices</li>
-                                <li>Oversaw construction of mosques, fuel stations, and central kitchens</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="company-header">
-                            <div class="company-name">TWO CONSTRUCT CO. (TCC)</div>
-                            <div class="company-period">October 2005 – December 2007</div>
-                        </div>
-                        <div class="job-title">Site / Project Engineer | UAE</div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">High-Rise Residential Building (G+M+10)</div>
-                            <ul class="project-details">
-                                <li>Managed substructure works using bentonite piling and raft foundation</li>
-                                <li>Implemented flat slab construction techniques</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-item">
-                            <div class="project-title">Sheikh Zayed Residential Project (5x G+1 Villas)</div>
-                            <ul class="project-details">
-                                <li>Directed construction and super-luxury finishing works</li>
-                                <li>Managed project in Ras Al Khaimah for prestigious client</li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="action-buttons">
-            <a href="#" class="btn btn-download" id="downloadBtn">
-                <i class="fas fa-download"></i> Download as PDF
-            </a>
-            <a href="#" class="btn btn-print" onclick="window.print()">
-                <i class="fas fa-print"></i> Print Resume
-            </a>
+
+        <!-- Main Content -->
+        <div class="p-8">
+            <!-- Professional Summary -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">PROFESSIONAL SUMMARY</h2>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Accomplished PMP-certified Civil Engineer and Project Manager with over 20 years of comprehensive experience across the UAE, Saudi Arabia, and Egypt. Demonstrated expertise in managing multi-million dollar infrastructure projects including residential developments, industrial facilities, petrochemical plants, and water treatment systems. Proven track record of leading cross-functional teams through complete project lifecycles while maintaining the highest standards of quality, safety, and budget compliance. Bilingual professional with exceptional stakeholder management and risk mitigation capabilities.
+                </p>
+            </section>
+
+            <!-- Core Competencies -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">CORE COMPETENCIES</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-project-diagram text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Project Management</h3>
+                        <p class="text-sm text-gray-600">End-to-end project lifecycle management</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-hard-hat text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Civil Engineering</h3>
+                        <p class="text-sm text-gray-600">Structural design & construction management</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-users text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Team Leadership</h3>
+                        <p class="text-sm text-gray-600">Multi-disciplinary team coordination</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Risk Management</h3>
+                        <p class="text-sm text-gray-600">Comprehensive risk assessment & mitigation</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-dollar-sign text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Budget Control</h3>
+                        <p class="text-sm text-gray-600">Cost management & financial oversight</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <i class="fas fa-handshake text-blue-600 text-xl mb-2"></i>
+                        <h3 class="font-semibold">Stakeholder Relations</h3>
+                        <p class="text-sm text-gray-600">Client & vendor relationship management</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">PROFESSIONAL EXPERIENCE</h2>
+                
+                <!-- Current Position -->
+                <div class="experience-item">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
+                            <p class="text-lg text-blue-600 font-semibold">Dar Alsharq Contracting and Suppling</p>
+                            <p class="text-gray-600 font-medium">Egypt</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">July 2017 - Present</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">8-Floor Residential Building Project</h4>
+                            <p class="text-gray-700 mb-2">Executed comprehensive civil and construction works for an 800 sqm residential building in New Cairo City under Armed Forces supervision.</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Project scope: Basement, ground floor, and six typical floors with four apartments each</li>
+                                <li>• Coordinated with military supervision authorities</li>
+                                <li>• Ensured compliance with stringent quality and security requirements</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">General Civil Works Portfolio</h4>
+                            <p class="text-gray-700 mb-2">Delivered diverse civil engineering projects across New Mansoura City, New Capital, and other strategic locations in Egypt.</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Concrete works, masonry, plastering, tiling, and finishing operations</li>
+                                <li>• MEP (Mechanical, Electrical, Plumbing) coordination and implementation</li>
+                                <li>• Quality assurance and project delivery optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RMCO Position -->
+                <div class="experience-item">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800"> Project Manager</h3>
+                            <p class="text-lg text-blue-600 font-semibold">RMCO (Rabigh Modern Contracting)</p>
+                            <p class="text-gray-600 font-medium">Kingdom of Saudi Arabia</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">April 2012 - July 2017</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Wastewater Treatment Plant (WWTP)</h4>
+                            <p class="text-gray-700 mb-2"><strong>Clients:</strong> Saudi Aramco & Sumitomo Chemical | <strong>Main Contractor:</strong> Petrofac</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Constructed 6,600m³ of concrete for effluent, aeration, and equalization basins</li>
+                                <li>• Delivered clarifiers, thickener, and DAF (Dissolved Air Flotation) units</li>
+                                <li>• Implemented comprehensive pipe support systems and lift stations</li>
+                                <li>• Designed and executed various foundation systems and duct banks</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Petro Rabigh Main Entrance & Facilities</h4>
+                            <p class="text-gray-700 mb-2"><strong>Client:</strong> Petro Rabigh (Rabigh Refining and Petrochemical Co.)</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Constructed single-floor security building with advanced safety features</li>
+                                <li>• Developed new asphalt roads and parking infrastructure</li>
+                                <li>• Installed Aramco-standard safety fencing and road sunshade systems</li>
+                                <li>• Integrated various ancillary facilities and utilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMCO Position -->
+                <div class="experience-item">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
+                            <p class="text-lg text-blue-600 font-semibold">EMCO Building Contracting</p>
+                            <p class="text-gray-600 font-medium">United Arab Emirates</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">December 2007 - March 2012</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Gallery Villas - Dubai Sports City</h4>
+                            <p class="text-gray-700 mb-2"><strong>Client:</strong> Dubai Sports City | <strong>Consultant:</strong> QHC Architects & Engineering</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Managed construction of 50 luxury gallery villas</li>
+                                <li>• Coordinated civil construction, electromechanical, and high-end finishing works</li>
+                                <li>• Supervised comprehensive landscaping and infrastructure development</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">UAE Armed Forces Projects</h4>
+                            <p class="text-gray-700 mb-2"><strong>Client:</strong> UAE Armed Forces | <strong>Consultant:</strong> Directory of Military Works (D.M.W)</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Headquarters building and residential accommodation facilities</li>
+                                <li>• Office buildings, mosque, and steel structure constructions</li>
+                                <li>• Fuel stations, central kitchens, and helipad development</li>
+                                <li>• Comprehensive road networks and parking infrastructure</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Border Guard Centers (RAK & Fujairah)</h4>
+                            <p class="text-gray-700 mb-2"><strong>Scope:</strong> 40,000 m² sites with 800m precast boundary walls</p>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• 10 specialized facilities including accommodation and office buildings (1,000 m²)</li>
+                                <li>• Religious, operational, and support infrastructure</li>
+                                <li>• Helipad construction and central kitchen facilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TCC Position -->
+                <div class="experience-item">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Project Engineer</h3>
+                            <p class="text-lg text-blue-600 font-semibold">Two Construct Co. (TCC)</p>
+                            <p class="text-gray-600 font-medium">United Arab Emirates</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">October 2005 - December 2007</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">High-Rise Development Projects</h4>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• G+M+10 Building: Bentonite piling system, raft foundation, and flat slab construction</li>
+                                <li>• G+M+6 Building: CFA (Continuous Flight Auger) piling, isolated pile caps, and hourdi slabs</li>
+                                <li>• Specialized in substructure works and advanced foundation systems</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Luxury Residential Villas</h4>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Five G+1 villas for RAK Sheikh - Sheikh Zayed residential project</li>
+                                <li>• Super luxury finishing and high-end construction standards</li>
+                                <li>• Comprehensive project delivery from foundation to final handover</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Certifications -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">EDUCATION & CERTIFICATIONS</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">Bachelor of Civil Engineering</h3>
+                                <p class="text-blue-600 font-medium">Mansoura University, Egypt</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-2"><strong>Year:</strong> 2003</p>
+                        <p class="text-gray-700"><strong>Graduation Project:</strong> Design of Steel Structure (Excellent Grade)</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-certificate text-green-600 text-2xl mr-3"></i>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">Project Management Professional</h3>
+                                <p class="text-green-600 font-medium">PMI Certification</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700"><strong>PMP Number:</strong> 1908392</p>
+                        <p class="text-gray-700"><strong>Status:</strong> Active Certification</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">TECHNICAL PROFICIENCIES</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Software & Technology</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-tag">AutoCAD</span>
+                            <span class="skill-tag">Primavera P6</span>
+                            <span class="skill-tag">Revit</span>
+                            <span class="skill-tag">MS Project</span>
+                            <span class="skill-tag">MS Office Suite</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Specialized Expertise</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-tag">Structural Design</span>
+                            <span class="skill-tag">Project Scheduling</span>
+                            <span class="skill-tag">Cost Management</span>
+                            <span class="skill-tag">Risk Assessment</span>
+                            <span class="skill-tag">Quality Control</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Languages</h3>
+                    <div class="flex space-x-4">
+                        <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                            <span class="font-medium">Arabic:</span> Native
+                        </div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                            <span class="font-medium">English:</span> Fluent
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Achievements -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 section-title">KEY ACHIEVEMENTS</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
+                        <i class="fas fa-trophy text-blue-600 text-xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Multi-Million Dollar Projects</h4>
+                        <p class="text-gray-600 text-sm">Successfully delivered complex infrastructure projects exceeding $10M+ in value</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg">
+                        <i class="fas fa-shield-alt text-green-600 text-xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Zero Safety Incidents</h4>
+                        <p class="text-gray-600 text-sm">Maintained exemplary safety records across all major project assignments</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg">
+                        <i class="fas fa-clock text-purple-600 text-xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">On-Time Delivery</h4>
+                        <p class="text-gray-600 text-sm">Consistent track record of meeting or exceeding project timeline commitments</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
+                        <i class="fas fa-users text-orange-600 text-xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800">Team Leadership</h4>
+                        <p class="text-gray-600 text-sm">Led cross-functional teams of 50+ professionals across multiple disciplines</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-800 text-white p-6 text-center">
+            <p class="text-sm">This CV represents a comprehensive overview of professional experience and qualifications current as of 2025</p>
         </div>
     </div>
-
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('To save as PDF: 1. Click "Print Resume" button. 2. In print dialog, choose "Save as PDF" as destination. 3. Adjust settings if needed and click "Save".');
-        });
-    </script>
 </body>
 </html>
+        
