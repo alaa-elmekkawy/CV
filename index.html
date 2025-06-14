@@ -13,7 +13,7 @@
             line-height: 1.6;
         }
         .section-title {
-            border-bottom: 3px solid #3B82F6;
+            border-bottom: 3px solid #4365a1;
             padding-bottom: 8px;
             margin-bottom: 24px;
         }
@@ -22,8 +22,13 @@
             padding-left: 20px;
             margin-bottom: 32px;
             position: relative;
-        }
-        .experience-item::before {
+            transition: all 0.3s ease;
+          }
+          .experience-item:hover {
+            background-color: #f0f9ff;
+            transform: translateY(-4px);
+          }
+          .experience-item::before {
             content: '';
             width: 12px;
             height: 12px;
@@ -32,60 +37,83 @@
             position: absolute;
             left: -7.5px;
             top: 8px;
-        }
-        .skill-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          }
+          .skill-tag {
+            background:linear-gradient(135deg, #476597 0%, #273552 100%);
             color: white;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.875rem;
             display: inline-block;
             margin: 4px;
-        }
+            transition: background 0.3s ease;
+          }
+          .skill-tag:hover {
+            background: #273855;
+          }
+          .header {
+            background: linear-gradient(135deg, #202b39 0%, #3a455d 100%);
+          }
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            word-break: break-word;
+          }
+          .contact-item:hover {
+            transform: translateY(-2px);
+          }
+          .contact-icon {
+            width: 20px;
+            height: 20px;
+            background: #1e3c72;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+          }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <div class="max-w-4xl mx-auto bg-white shadow-2xl">
         <!-- Header Section -->
-        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div>
-                    <h1 class="text-4xl font-bold mb-2">ALAA ELMEKKAWY</h1>
-                    <p class="text-xl text-blue-100 mb-4">Civil Engineer & Project Manager, PMP</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <div class="flex items-center">
-                            <i class="fas fa-certificate mr-2"></i>
-                            <span>PMP #1908392</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-flag mr-2"></i>
-                            <span>Egyptian National</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock mr-2"></i>
-                            <span>20+ Years Experience</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 md:mt-0 text-right">
-                    <div class="flex items-center justify-end">
-                        <i class="fab fa-linkedin mr-2"></i>
-                        <span>linkedin.com/in/alaaelmekkawy</span>
-                    </div>                    
-                    <div class="flex flex-col gap-2">
-                        <div class="flex items-center justify-end">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <span>eng.alaa.ae@gmail.com</span>
-                        </div>
-                        <div class="flex items-center justify-end">
-                            <i class="fas fa-phone mr-2"></i>
-                            <span>+20 1002003109</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+    <div class="header text-white p-10 text-center relative overflow-hidden">
+      <div class="relative z-10">
+        <h1 class="text-2xl font-extrabold mb-2 drop-shadow-lg">ALAA </br> MOHAMMED RAMADAN ELMEKKAWY</h1>
+        <p class="text-xl font-light text-blue-100 mb-4">Project Manager | Civil Engineer</p>
+        <div class="inline-block bg-white bg-opacity-20 px-4 py-1 rounded-full font-semibold border border-white border-opacity-30 backdrop-blur-sm">PMP Certified #1908392</div>
+      </div>
+    </div>
+    
+        <!-- Contact Info -->
+    <div class="p-6 bg-gray-100 border-b-2 border-gray-200">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <span>eng.alaa.ae@gmail.com</span>
         </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <span>+20 100 200 3109</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <span>linkedin.com/in/alaaelmekkawy</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <span>people.bayt.com/alaa-mekkawy</span>
+        </div>
+      </div>
+    </div>
 
         <!-- Main Content -->
         <div class="p-8">
@@ -102,32 +130,32 @@
                 <h2 class="text-2xl font-bold text-gray-800 section-title">CORE COMPETENCIES</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-project-diagram text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-project-diagram text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Project Management</h3>
                         <p class="text-sm text-gray-600">End-to-end project lifecycle management</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-hard-hat text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-hard-hat text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Civil Engineering</h3>
                         <p class="text-sm text-gray-600">Structural design & construction management</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-users text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-users text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Team Leadership</h3>
                         <p class="text-sm text-gray-600">Multi-disciplinary team coordination</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-shield-alt text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-shield-alt text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Risk Management</h3>
                         <p class="text-sm text-gray-600">Comprehensive risk assessment & mitigation</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-dollar-sign text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-dollar-sign text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Budget Control</h3>
                         <p class="text-sm text-gray-600">Cost management & financial oversight</p>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-handshake text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-handshake text-blue-800 text-xl mb-2"></i>
                         <h3 class="font-semibold">Stakeholder Relations</h3>
                         <p class="text-sm text-gray-600">Client & vendor relationship management</p>
                     </div>
@@ -143,7 +171,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
-                            <p class="text-lg text-blue-600 font-semibold">Dar Alsharq Contracting and Suppling</p>
+                            <p class="text-lg text-blue-800 font-semibold">Dar Alsharq Contracting and Suppling</p>
                             <p class="text-gray-600 font-medium">Egypt</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">July 2017 - Present</span>
@@ -175,7 +203,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-xl font-bold text-gray-800"> Project Manager</h3>
-                            <p class="text-lg text-blue-600 font-semibold">RMCO (Rabigh Modern Contracting)</p>
+                            <p class="text-lg text-blue-800 font-semibold">RMCO (Rabigh Modern Contracting)</p>
                             <p class="text-gray-600 font-medium">Kingdom of Saudi Arabia</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">April 2012 - July 2017</span>
@@ -209,7 +237,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
-                            <p class="text-lg text-blue-600 font-semibold">EMCO Building Contracting</p>
+                            <p class="text-lg text-blue-800 font-semibold">EMCO Building Contracting</p>
                             <p class="text-gray-600 font-medium">United Arab Emirates</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">December 2007 - March 2012</span>
@@ -251,7 +279,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-xl font-bold text-gray-800">Project Engineer</h3>
-                            <p class="text-lg text-blue-600 font-semibold">Two Construct Co. (TCC)</p>
+                            <p class="text-lg text-blue-800 font-semibold">Two Construct Co. (TCC)</p>
                             <p class="text-gray-600 font-medium">United Arab Emirates</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">October 2005 - December 2007</span>
@@ -283,10 +311,10 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
                         <div class="flex items-center mb-3">
-                            <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+                            <i class="fas fa-graduation-cap text-blue-800 text-2xl mr-3"></i>
                             <div>
                                 <h3 class="text-lg font-bold text-gray-800">Bachelor of Civil Engineering</h3>
-                                <p class="text-blue-600 font-medium">Mansoura University, Egypt</p>
+                                <p class="text-blue-800 font-medium">Mansoura University, Egypt</p>
                             </div>
                         </div>
                         <p class="text-gray-700 mb-2"><strong>Year:</strong> 2003</p>
@@ -349,7 +377,7 @@
                 <h2 class="text-2xl font-bold text-gray-800 section-title">KEY ACHIEVEMENTS</h2>
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
-                        <i class="fas fa-trophy text-blue-600 text-xl mb-2"></i>
+                        <i class="fas fa-trophy text-blue-800 text-xl mb-2"></i>
                         <h4 class="font-semibold text-gray-800">Multi-Million Dollar Projects</h4>
                         <p class="text-gray-600 text-sm">Successfully delivered complex infrastructure projects exceeding $10M+ in value</p>
                     </div>
@@ -372,11 +400,54 @@
             </section>
         </div>
 
+
+        <!-- Project Gallery Slider -->
+        <div class="p-8 hidden">
+          <h2 class="text-2xl font-bold text-gray-800 section-title">PROJECTS GALLERY</h2>
+          <div class="relative overflow-hidden w-full max-w-full h-[300px]">
+            <div id="slider" class="flex transition-transform duration-700 ease-in-out h-[300px]">
+              <img src="https://images.unsplash.com/photo-1581091012184-7a61de18f0c6" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 1">
+              <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 2">
+              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+            </div>
+            <div class="flex justify-between mt-4">
+              <button onclick="moveSlide(-1)" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded">⟨ Prev</button>
+              <button onclick="moveSlide(1)" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded">Next ⟩</button>
+            </div>
+          </div>
+        </div>
+
+
+
         <!-- Footer -->
         <div class="bg-gray-800 text-white p-6 text-center">
             <p class="text-sm">This CV represents a comprehensive overview of professional experience and qualifications current as of 2025</p>
         </div>
     </div>
+    
+    
+    
+    <!-- Slider Script -->
+  <script>
+    let currentIndex = 0;
+    const slider = document.getElementById('slider');
+    const totalSlides = slider.children.length;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function moveSlide(dir) {
+      currentIndex = (currentIndex + dir + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    // Auto-slide every 4 seconds
+    setInterval(() => {
+      moveSlide(1);
+    }, 4000);
+  </script>
+  
 </body>
 </html>
         
