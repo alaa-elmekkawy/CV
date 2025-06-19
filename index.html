@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -64,6 +65,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             word-break: break-word;
+            color: #3a455d;
           }
           .contact-item:hover {
             transform: translateY(-2px);
@@ -80,6 +82,393 @@
             font-size: 0.8rem;
             flex-shrink: 0;
           }
+          
+          
+          
+          /* CSS Variables for Color Palette */
+        :root {
+            --primary-dark: #2C3E50; /* Dark Slate Gray / Deep Charcoal */
+            --primary-medium: #34495E; /* Slightly lighter Slate Gray */
+            --text-color: #4A4A4A; /* Dark Gray for body text */
+            --light-bg: #F8F8F8; /* Off-white background */
+            --white-bg: #FFFFFF; /* Pure White for container */
+            --accent-color: #00796B; /* Deep Teal - powerful yet quiet */
+            --accent-hover: #004D40; /* Darker Teal for hover states */
+            --border-color: #E0E0E0; /* Light Gray for borders */
+            --skill-bg: #E0F2F1; /* Very light teal for skill tags */
+            --skill-text: #00695C; /* Muted teal for skill text */
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --hover-shadow: rgba(0, 0, 0, 0.15);
+        }
+
+        /* Basic Reset & Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background-color: var(--white-bg);
+            box-shadow: 0 4px 20px var(--shadow-color);
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            color: var(--primary-medium);
+        }
+
+        h3 {
+            font-size: 1em;
+            color: var(--primary-medium);
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-size: 1.05em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1em;
+        }
+
+        ul li {
+            margin-bottom: 0.5em;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent-color);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            padding: 15px; /* Add padding for shadow effect */
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle initial shadow */
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--accent-hover);
+            box-shadow: 0 4px 15px var(--hover-shadow); /* More pronounced shadow on hover */
+        }
+
+        .experience-item h3 {
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        .experience-item p.role-company {
+            font-style: italic;
+            color: var(--text-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            margin-top: 10px;
+        }
+
+        /* Skills Section */
+        .skills-category {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--light-bg);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .skills-category:hover {
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .skills-category h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-medium);
+        }
+
+        .skills-category h3 i {
+            color: var(--accent-color);
+            font-size: 1.2em;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list span {
+            background-color: var(--skill-bg);
+            color:#136987;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.90em;
+            white-space: nowrap;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            cursor: default;
+        }
+
+        .skills-list span:hover {
+            background-color: var(--accent-color);
+            color: var(--white-bg);
+            transform: translateY(-2px);
+        }
+
+        /* Key Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .achievement-item {
+            background-color: var(--white-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px var(--hover-shadow);
+        }
+
+        .achievement-item i {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .achievement-item h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-medium);
+            font-size: 1.3em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .achievement-item p {
+            font-size: 0.95em;
+            color: var(--text-color);
+            margin-bottom: 0;
+        }
+
+        /* Project Slider Section */
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            margin-top: 20px;
+        }
+
+        .slider-track {
+            display: flex;
+            width: fit-content; /* Allows content to define width */
+            animation: scroll-images 20s linear infinite; /* Adjust time as needed */
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused; /* Pause on hover */
+        }
+
+        .slider-item {
+            flex-shrink: 0;
+            width: 400px; /* Adjust image width as desired */
+            height: 250px; /* Adjust image height as desired */
+            margin-right: 15px; /* Space between images */
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #eee; /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            display: block;
+        }
+
+        /* Keyframes for auto-scrolling */
+        @keyframes scroll-images {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-415px * 4)); } /* (image width + margin) * (number of images - 1) */
+            /* If you have 5 images and want to scroll through all of them, it's (image width + margin) * (number of images) */
+            /* For continuous loop, you might need to duplicate images in HTML */
+        }
+        /* For a seamless loop, you'd typically duplicate the first few images at the end of the track.
+           For this example, I'm assuming 5 images and scrolling past 4 of them.
+           If you add more images, adjust the `calc` value: (image width + margin) * (total images - 1)
+           Or, for infinite loop, duplicate the first N images at the end and adjust keyframes to scroll N images.
+        */
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-color);
+            font-size: 0.9em;
+        }
+
+        footer .contact-info {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.7em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .skills-list {
+                justify-content: center;
+            }
+            .achievements-grid {
+                grid-template-columns: 1fr; /* Stack achievements on small screens */
+            }
+            .slider-item {
+                width: 300px; /* Adjust for smaller screens */
+                height: 200px;
+            }
+            @keyframes scroll-images {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-315px * 4)); } /* Adjust for new width */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .slider-item {
+                width: 250px; /* Even smaller */
+                height: 180px;
+            }
+            @keyframes scroll-images {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-265px * 4)); } /* Adjust for new width */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -87,8 +476,8 @@
         <!-- Header Section -->
     <div class="header text-white p-10 text-center relative overflow-hidden">
       <div class="relative z-10">
-        <h1 class="text-2xl font-extrabold mb-2 drop-shadow-lg">ALAA </br> MOHAMMED RAMADAN ELMEKKAWY</h1>
-        <p class="text-xl font-light text-blue-100 mb-4">Project Manager | Civil Engineer</p>
+        <h1 class="mb-2 drop-shadow-lg">Alaa </br> Mohammed Ramadan Elmekkawy</h1>
+        <p class="text-xl font-light  mb-4">Project Manager | Civil Engineer | Visionary Project Leader</p>
         <div class="inline-block bg-white bg-opacity-20 px-4 py-1 rounded-full font-semibold border border-white border-opacity-30 backdrop-blur-sm">PMP Certified #1908392</div>
       </div>
     </div>
@@ -97,20 +486,16 @@
     <div class="p-6 bg-gray-100 border-b-2 border-gray-200">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="contact-item">
-          <div class="contact-icon">✉</div>
-          <span>eng.alaa.ae@gmail.com</span>
+          <span><a href="mailto:eng.alaa.ae@gmail.com"><i class="fas fa-envelope"></i> eng.alaa.ae@gmail.com</a></span>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <span>+20 100 200 3109</span>
+          <span><i class="fas fa-phone-alt"></i>  +20 1002003109</span>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <span>linkedin.com/in/alaaelmekkawy</span>
+          <span><a href="https://sa.linkedin.com/in/alaaelmekkawy" target="_blank"><i class="fab fa-linkedin"></i>  LinkedIn Profile</a></span>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">🌐</div>
-          <span>people.bayt.com/alaa-mekkawy</span>
+          <span><a href="https://people.bayt.com/alaa-mekkawy/" target="_blank"><i class="fas fa-briefcase"></i>  Bayt Profile</a></span>
         </div>
       </div>
     </div>
@@ -125,42 +510,76 @@
                 </p>
             </section>
 
-            <!-- Core Competencies -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 section-title">CORE COMPETENCIES</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-project-diagram text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Project Management</h3>
-                        <p class="text-sm text-gray-600">End-to-end project lifecycle management</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-hard-hat text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Civil Engineering</h3>
-                        <p class="text-sm text-gray-600">Structural design & construction management</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-users text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Team Leadership</h3>
-                        <p class="text-sm text-gray-600">Multi-disciplinary team coordination</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-shield-alt text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Risk Management</h3>
-                        <p class="text-sm text-gray-600">Comprehensive risk assessment & mitigation</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-dollar-sign text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Budget Control</h3>
-                        <p class="text-sm text-gray-600">Cost management & financial oversight</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <i class="fas fa-handshake text-blue-800 text-xl mb-2"></i>
-                        <h3 class="font-semibold">Stakeholder Relations</h3>
-                        <p class="text-sm text-gray-600">Client & vendor relationship management</p>
-                    </div>
+
+            
+        <section id="skills">
+            <h2 class="text-2xl font-bold text-gray-800 section-title">Core Competencies & Skills</h2>
+            <p>My comprehensive skill set combines deep technical civil engineering knowledge with advanced project management methodologies, ensuring successful project delivery from conception to closeout.</p>
+
+            <div class="skills-category">
+                <h3><i class="fas fa-cogs"></i> Project Management & Leadership:</h3>
+                <div class="skills-list">
+                    <span>Project Lifecycle Management</span>
+                    <span>Strategic Planning & Execution</span>
+                    <span>Team Leadership & Development</span>
+                    <span>Stakeholder Management & Engagement</span>
+                    <span>Risk Management & Mitigation</span>
+                    <span>Schedule Development & Control</span>
+                    <span>Budgeting & Cost Control</span>
+                    <span>Quality Assurance & Control (QA/QC)</span>
+                    <span>Procurement & Subcontractor Management</span>
+                    <span>Contract Administration</span>
+                    <span>Claims Management</span>
+                    <span>Progress Reporting & Performance Monitoring</span>
+                    <span>Health, Safety, and Environmental (HSE) Compliance</span>
+                    <span>Change Management</span>
+                    <span>Project Closeout & Handover</span>
                 </div>
-            </section>
+            </div>
+
+            <div class="skills-category">
+                <h3><i class="fas fa-hard-hat"></i> Construction & Engineering Expertise:</h3>
+                <div class="skills-list">
+                    <span>Residential (Vertical & Horizontal) Construction</span>
+                    <span>Industrial & Petrochemical Plant Construction</span>
+                    <span>Water & Wastewater Treatment Plant (WWTP) Construction</span>
+                    <span>Piling Works (Bentonite, CFA)</span>
+                    <span>Structural Design Principles</span>
+                    <span>Earthworks & Site Preparation</span>
+                    <span>Concrete Technology & Application</span>
+                    <span>MEP Coordination</span>
+                    <span>Finishing Works (Super Lux, High-Level)</span>
+                    <span>Site Supervision & Operations</span>
+                    <span>Construction Methodologies</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3><i class="fas fa-laptop-code"></i> Software & Tools:</h3>
+                <div class="skills-list">
+                    <span>Primavera P6 (Advanced)</span>
+                    <span>AutoCAD (Advanced)</span>
+                    <span>Revit (BIM)</span>
+                    <span>Microsoft Project</span>
+                    <span>Microsoft Office Suite (Word, Excel, PowerPoint)</span>
+                    <span>General Project Management Software</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3><i class="fas fa-comments"></i> Interpersonal & Communication:</h3>
+                <div class="skills-list">
+                    <span>Exceptional Communication (English & Arabic)</span>
+                    <span>Negotiation & Conflict Resolution</span>
+                    <span>Problem-Solving & Decision-Making</span>
+                    <span>Team Collaboration & Motivation</span>
+                    <span>Adaptability & Resilience</span>
+                    <span>Mentoring & Coaching</span>
+                </div>
+            </div>
+        </section>
+        
+        
 
             <!-- Professional Experience -->
             <section class="mb-8">
@@ -334,43 +753,22 @@
                 </div>
             </section>
 
-            <!-- Technical Skills -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 section-title">TECHNICAL PROFICIENCIES</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Software & Technology</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-tag">AutoCAD</span>
-                            <span class="skill-tag">Primavera P6</span>
-                            <span class="skill-tag">Revit</span>
-                            <span class="skill-tag">MS Project</span>
-                            <span class="skill-tag">MS Office Suite</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Specialized Expertise</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-tag">Structural Design</span>
-                            <span class="skill-tag">Project Scheduling</span>
-                            <span class="skill-tag">Cost Management</span>
-                            <span class="skill-tag">Risk Assessment</span>
-                            <span class="skill-tag">Quality Control</span>
-                        </div>
-                    </div>
+                   <section id="project-gallery">
+            <h2>Project Highlights</h2>
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Replace these placeholder images with your actual project photos -->
+                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-01%20.jpg" alt="Project 1"></div>
+                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-01%20.jpg" alt="Project 2"></div>
+                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-back-01.jpg" alt="Project 3"></div>
+                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/MID%20UNIT%20%20LOUNGE%20AND%20DINING%20AREA.jpg"></div>
+                    <div class="slider-item"><img src="https://via.placeholder.com/400x250/00796B/FFFFFF?text=Project+Image+5" alt="Project 5"></div>
+                    <!-- Duplicate first few images for seamless loop if desired -->
+                    <div class="slider-item"><img src="https://via.placeholder.com/400x250/004D40/FFFFFF?text=Project+Image+1" alt="Project 1 Duplicate"></div>
+                    <div class="slider-item"><img src="https://via.placeholder.com/400x250/00796B/FFFFFF?text=Project+Image+2" alt="Project 2 Duplicate"></div>
                 </div>
-                <div class="mt-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Languages</h3>
-                    <div class="flex space-x-4">
-                        <div class="bg-gray-100 px-4 py-2 rounded-lg">
-                            <span class="font-medium">Arabic:</span> Native
-                        </div>
-                        <div class="bg-gray-100 px-4 py-2 rounded-lg">
-                            <span class="font-medium">English:</span> Fluent
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
             <!-- Key Achievements -->
             <section class="mb-8">
@@ -379,22 +777,22 @@
                     <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
                         <i class="fas fa-trophy text-blue-800 text-xl mb-2"></i>
                         <h4 class="font-semibold text-gray-800">Multi-Million Dollar Projects</h4>
-                        <p class="text-gray-600 text-sm">Successfully delivered complex infrastructure projects exceeding $10M+ in value</p>
+                        <p class="text-gray-600 text-sm">Successfully delivered complex infrastructure projects, consistently exceeding financial targets and client expectations.</p>
                     </div>
                     <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg">
                         <i class="fas fa-shield-alt text-green-600 text-xl mb-2"></i>
                         <h4 class="font-semibold text-gray-800">Zero Safety Incidents</h4>
-                        <p class="text-gray-600 text-sm">Maintained exemplary safety records across all major project assignments</p>
+                        <p class="text-gray-600 text-sm">Maintained exemplary safety records across all major project assignments, fostering a culture of safety excellence.</p>
                     </div>
                     <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg">
                         <i class="fas fa-clock text-purple-600 text-xl mb-2"></i>
                         <h4 class="font-semibold text-gray-800">On-Time Delivery</h4>
-                        <p class="text-gray-600 text-sm">Consistent track record of meeting or exceeding project timeline commitments</p>
+                        <p class="text-gray-600 text-sm">Consistent track record of meeting or exceeding project timeline commitments, ensuring efficient project progression.</p>
                     </div>
                     <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
                         <i class="fas fa-users text-orange-600 text-xl mb-2"></i>
                         <h4 class="font-semibold text-gray-800">Team Leadership</h4>
-                        <p class="text-gray-600 text-sm">Led cross-functional teams of 50+ professionals across multiple disciplines</p>
+                        <p class="text-gray-600 text-sm">Led cross-functional teams of highly skilled professionals across multiple disciplines, driving collaborative success.</p>
                     </div>
                 </div>
             </section>
@@ -420,9 +818,15 @@
 
 
         <!-- Footer -->
-        <div class="bg-gray-800 text-white p-6 text-center">
-            <p class="text-sm">This CV represents a comprehensive overview of professional experience and qualifications current as of 2025</p>
-        </div>
+        <div class="bg-gray-800  p-6 text-center">
+            <div class="contact-info">
+                <span><a href=""><i class="fas fa-phone-alt"></i> +201002003109</span>
+                <span><a href="mailto:eng.alaa.ae@gmail.com"><i class="fas fa-envelope"></i> eng.alaa.ae@gmail.com</a></span>
+                <span><a href="https://sa.linkedin.com/in/alaaelmekkawy" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></span>
+                <span><a href="https://alaa-elmekkawy.github.io/CV/" target="_blank"><i class="fas fa-globe"></i> Portfolio Website</a></span>
+                <span><a href="https://people.bayt.com/alaa-mekkawy/" target="_blank"><i class="fas fa-briefcase"></i> Bayt Profile</a></span>
+            </div>
+            <p>&copy; 2025 Alaa Elmekkawy. All rights reserved.</p>        </div>
     </div>
     
     
