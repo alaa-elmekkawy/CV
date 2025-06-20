@@ -132,7 +132,7 @@
         h1 {
             font-size: 2.2em;
             text-align: center;
-            margin-bottom: 10px;
+            line-height:1.1;
         }
 
         h2 {
@@ -154,25 +154,6 @@
             font-size: 1.05em;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 1em;
-        }
-
-        ul li {
-            margin-bottom: 0.5em;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        ul li::before {
-            content: '•';
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
 
         /* Header Section */
         .header {
@@ -223,36 +204,11 @@
             margin-bottom: 30px;
         }
 
-        .experience-item {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 3px solid var(--accent-color);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-            padding: 15px; /* Add padding for shadow effect */
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle initial shadow */
-        }
 
-        .experience-item:hover {
-            border-left-color: var(--accent-hover);
-            box-shadow: 0 4px 15px var(--hover-shadow); /* More pronounced shadow on hover */
-        }
 
-        .experience-item h3 {
-            margin-bottom: 5px;
-            color: var(--primary-dark);
-        }
 
-        .experience-item p.role-company {
-            font-style: italic;
-            color: var(--text-color);
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
 
-        .experience-item ul {
-            margin-top: 10px;
-        }
+ 
 
         /* Skills Section */
         .skills-category {
@@ -753,28 +709,7 @@
                 </div>
             </section>
 
-                   <section id="project-gallery">
-            <h2>Project Highlights</h2>
-            <div class="slider-container">
-                <div class="slider-track">
-                    <!-- Replace these placeholder images with your actual project photos -->
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-01%20.jpg?raw=true" alt="Project 1"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-01%20.jpg?raw=true" alt="Project 2"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-back-01.jpg?raw=true" alt="Project 3"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-03-21%2009-41-52%20(1901120).jpg?raw=true"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-18-24%20(1866304).jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815040.jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815042.jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20120214.jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221001.jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0140.jpg?raw=true" alt="Project 5"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0204.jpg?raw=true" alt="Project 5"></div>
-                    <!-- Duplicate first few images for seamless loop if desired -->
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-17-34%20(1680128).jpg?raw=true" alt="Project 1 Duplicate"></div>
-                    <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815041.jpg?raw=true" alt="Project 2 Duplicate"></div>
-                </div>
-            </div>
-        </section>
+
 
             <!-- Key Achievements -->
             <section class="mb-8">
@@ -802,21 +737,65 @@
                     </div>
                 </div>
             </section>
+            
+            <section id="project-gallery" class="hidden">
+              <h2>Projects Highlights</h2>
+              <div class="slider-container">
+                  <div class="slider-track">
+                       Replace these placeholder images with your actual project photos 
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-01%20.jpg?raw=true" alt="Project 1"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-01%20.jpg?raw=true" alt="Project 2"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/Gallery-villa-detached-back-01.jpg?raw=true" alt="Project 3"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-03-21%2009-41-52%20(1901120).jpg?raw=true"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-18-24%20(1866304).jpg?raw=true" alt="Project 5"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815040.jpg?raw=true" alt="Project 6"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815042.jpg?raw=true" alt="Project 7"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20120214.jpg?raw=true" alt="Project 8"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221001.jpg?raw=true" alt="Project 5"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0140.jpg?raw=true" alt="Project 5"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0204.jpg?raw=true" alt="Project 5"></div>
+                       Duplicate first few images for seamless loop if desired 
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-17-34%20(1680128).jpg?raw=true" alt="Project 1 Duplicate"></div>
+                      <div class="slider-item"><img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815041.jpg?raw=true" alt="Project 2 Duplicate"></div>
+                  </div>
+              </div>
+            </section>
+            
+            
         </div>
 
 
         <!-- Project Gallery Slider -->
-        <div class="p-8 hidden">
+        <div class="p-8">
           <h2 class="text-2xl font-bold text-gray-800 section-title">PROJECTS GALLERY</h2>
           <div class="relative overflow-hidden w-full max-w-full h-[300px]">
             <div id="slider" class="flex transition-transform duration-700 ease-in-out h-[300px]">
-              <img src="https://images.unsplash.com/photo-1581091012184-7a61de18f0c6" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 1">
-              <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 2">
-              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 1">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815041.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 2">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-17-34%20(1680128).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-08-16%2021-24-34%20(46759104).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0140.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2014-49-19%20(1780928).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-08-03%2010-30-17%20(17734592).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0204.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/0-0129_1.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815040.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221001.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20120214.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815042.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-08-16%2010-33-24%20(46645056).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-08-06%2008-55-44%20(6358464).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-01-23%2015-29-42%20(48228096).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815045.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111031003.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20120103002.jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-08-16%2018-39-20%20(46734656).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-07-28%2015-04-13%20(17549952).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
+              <img src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2015-06-11%2012-51-56%20(47365632).jpg?raw=true" class="w-full h-[300px] flex-shrink-0 object-cover rounded-lg shadow-lg" alt="Project 3">
             </div>
             <div class="flex justify-between mt-4">
-              <button onclick="moveSlide(-1)" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded">⟨ Prev</button>
-              <button onclick="moveSlide(1)" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded">Next ⟩</button>
+              <button onclick="moveSlide(-1)" class="bg-blue-800 hover:bg-blue-800 text-white px-4 py-1 rounded">⟨ Prev</button>
+              <button onclick="moveSlide(1)" class="bg-blue-800 hover:bg-blue-800 text-white px-4 py-1 rounded">Next ⟩</button>
             </div>
           </div>
         </div>
@@ -824,7 +803,7 @@
 
 
         <!-- Footer -->
-        <div class="bg-gray-800  p-6 text-center">
+        <div class="bg-gray-800  p-6 text-center text-gray-400">
             <div class="contact-info">
                 <span><a href=""><i class="fas fa-phone-alt"></i> +201002003109</span>
                 <span><a href="mailto:eng.alaa.ae@gmail.com"><i class="fas fa-envelope"></i> eng.alaa.ae@gmail.com</a></span>
@@ -832,7 +811,8 @@
                 <span><a href="https://alaa-elmekkawy.github.io/CV/" target="_blank"><i class="fas fa-globe"></i> Portfolio Website</a></span>
                 <span><a href="https://people.bayt.com/alaa-mekkawy/" target="_blank"><i class="fas fa-briefcase"></i> Bayt Profile</a></span>
             </div>
-            <p>&copy; 2025 Alaa Elmekkawy. All rights reserved.</p>        </div>
+            <p>&copy; 2025 Alaa Elmekkawy. All rights reserved.</p>        
+        </div>
     </div>
     
     
