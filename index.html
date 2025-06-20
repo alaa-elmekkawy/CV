@@ -26,6 +26,18 @@
       --slider-item-width: 400px;
       --slider-item-margin: 15px;
       --slider-item-count: 15; /* Number of unique slider items */
+      --primary-dark: #2C3E50;
+      --primary-medium: #34495E;
+      --text-color: #4A4A4A;
+      --light-bg: #F8F8F8;
+      --white-bg: #FFFFFF;
+      --accent-color: #25486d;
+      --accent-hover: #004D40;
+      --border-color: #E0E0E0;
+      --skill-bg: #e4edf7;
+      --skill-text:#136987;
+      --shadow-color: rgba(0, 0, 0, 0.08);
+      --hover-shadow: rgba(0, 0, 0, 0.15);
     }
 
     body {
@@ -103,21 +115,7 @@
       flex-shrink: 0;
     }
 
-    /* CSS Variables for Color Palette */
-    :root {
-      --primary-dark: #2C3E50;
-      --primary-medium: #34495E;
-      --text-color: #4A4A4A;
-      --light-bg: #F8F8F8;
-      --white-bg: #FFFFFF;
-      --accent-color: #25486d;
-      --accent-hover: #004D40;
-      --border-color: #E0E0E0;
-      --skill-bg: #e4edf7;
-      --skill-text: #00695C;
-      --shadow-color: rgba(0, 0, 0, 0.08);
-      --hover-shadow: rgba(0, 0, 0, 0.15);
-    }
+ 
 
     /* Typography */
     h1 {
@@ -129,11 +127,12 @@
     }
 
     h2 {
-      font-size: 1.6em;
+      font-size: 1.5em;
       border-bottom: 2px solid var(--border-color);
       padding-bottom: 10px;
       margin-top: 30px;
       color: var(--primary-medium);
+      text-transform: capitalize;
     }
 
     h3 {
@@ -142,10 +141,7 @@
       margin-top: 20px;
     }
 
-    p {
-      margin-bottom: 1em;
-      font-size: 1.05em;
-    }
+  
 
     .contact-info {
       display: flex;
@@ -221,7 +217,7 @@
 
     .skills-list span {
       background-color: var(--skill-bg);
-      color: #136987;
+      color: var(--skill-text);
       padding: 8px 15px;
       border-radius: 8px;
       font-size: 0.90em;
@@ -400,7 +396,8 @@
     }
 
     footer .contact-info {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      color:#333;
     }
 
     /* Responsive Design */
@@ -490,8 +487,8 @@
     <div class="p-8">
       <!-- Professional Summary -->
       <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-800 section-title">
-          PROFESSIONAL SUMMARY
+        <h2 class=" font-bold section-title">
+          Professional Summary
         </h2>
         <p class="text-gray-700 text-lg leading-relaxed">
           PMP-certified Project Manager and Civil Engineer with over 20 years
@@ -514,7 +511,7 @@
 
       <!-- Skills Section -->
       <section id="skills">
-        <h2 class="text-2xl font-bold text-gray-800 section-title">
+        <h2 class="text-2xl font-bold section-title">
           Core Competencies & Skills
         </h2>
         <p>
@@ -548,16 +545,12 @@
           <h3><i class="fas fa-hard-hat"></i> Construction & Engineering Expertise:</h3>
           <div class="skills-list">
             <span>Residential (Vertical & Horizontal) Construction</span>
-            <span>Industrial & Petrochemical Plant Construction</span>
             <span>Water & Wastewater Treatment Plant (WWTP) Construction</span>
             <span>Piling Works (Bentonite, CFA)</span>
-            <span>Structural Design Principles</span>
             <span>Earthworks & Site Preparation</span>
-            <span>Concrete Technology & Application</span>
             <span>MEP Coordination</span>
             <span>Finishing Works (Super Lux, High-Level)</span>
             <span>Site Supervision & Operations</span>
-            <span>Construction Methodologies</span>
           </div>
         </div>
 
@@ -590,15 +583,15 @@
 
             <!-- Professional Experience -->
             <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 section-title">PROFESSIONAL EXPERIENCE</h2>
+                <h2 class="text-2xl font-bold section-title">Professional Experience</h2>
                 
                 <!-- Current Position -->
                 <div class="experience-item">
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
-                            <p class="text-lg text-blue-800 font-semibold">Dar Alsharq Contracting and Suppling</p>
-                            <p class="text-gray-600 font-medium">Egypt</p>
+                            <h3 class="text-xl font-bold text-gray-800">Dar Alsharq Contracting and Suppling</h3>
+                            <p class="text-lg text-blue-800 font-semibold">Project Manager</p>
+                            <p class="text-gray-800 font-medium">Egypt</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">July 2017 - Present</span>
                     </div>
@@ -628,9 +621,9 @@
                 <div class="experience-item">
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800"> Project Manager</h3>
-                            <p class="text-lg text-blue-800 font-semibold">RMCO (Rabigh Modern Contracting)</p>
-                            <p class="text-gray-600 font-medium">Kingdom of Saudi Arabia</p>
+                            <h3 class="text-xl font-bold text-gray-800">RMCO (Rabigh Modern Contracting)</h3>
+                            <p class="text-lg text-blue-800 font-semibold">Project Manager</p>
+                            <p class="text-gray-800 font-medium">Saudi Arabia</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">April 2012 - July 2017</span>
                     </div>
@@ -662,9 +655,9 @@
                 <div class="experience-item">
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
-                            <p class="text-lg text-blue-800 font-semibold">EMCO Building Contracting</p>
-                            <p class="text-gray-600 font-medium">United Arab Emirates</p>
+                            <h3 class="text-xl font-bold text-gray-800">EMCO Building Contracting</h3>
+                            <p class="text-lg text-blue-800 font-semibold">Project Manager</p>
+                            <p class="text-gray-800 font-medium">UAE</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">December 2007 - March 2012</span>
                     </div>
@@ -704,9 +697,9 @@
                 <div class="experience-item">
                     <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800">Project Engineer</h3>
-                            <p class="text-lg text-blue-800 font-semibold">Two Construct Co. (TCC)</p>
-                            <p class="text-gray-600 font-medium">United Arab Emirates</p>
+                            <h3 class="text-xl font-bold text-gray-800">Two Construct Co. (TCC)</h3>
+                            <p class="text-lg text-blue-800 font-semibold">Project Engineer</p>
+                            <p class="text-gray-800 font-medium">UAE</p>
                         </div>
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">October 2005 - December 2007</span>
                     </div>
@@ -722,7 +715,7 @@
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-800 mb-2">Luxury Residential Villas</h4>
                             <ul class="text-gray-600 text-sm space-y-1">
-                                <li>• Five G+1 villas for RAK Sheikh - Sheikh Zayed residential project</li>
+                                <li>• 5-NO G+1 villas for RAK Sheikh - Sheikh Zayed residential project</li>
                                 <li>• Super luxury finishing and high-end construction standards</li>
                                 <li>• Comprehensive project delivery from foundation to final handover</li>
                             </ul>
@@ -733,7 +726,7 @@
 
             <!-- Education & Certifications -->
             <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 section-title">EDUCATION & CERTIFICATIONS</h2>
+                <h2 class="text-2xl font-bold  section-title">Education & Certifications</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
                         <div class="flex items-center mb-3">
@@ -761,7 +754,7 @@
             </section>
 
 
-      <!-- Projects Gallery Slider -->
+       Projects Gallery Slider 
       <section aria-label="Projects Gallery" class="mb-8">
         <h2 class="section-title">PROJECTS GALLERY</h2>
         <div
@@ -771,7 +764,7 @@
           aria-atomic="true"
         >
           <div class="slider-track" id="slider-track" aria-hidden="true">
-            <!-- Original 15 slider items -->
+             Original 15 slider items 
             <div class="slider-item">
               <img
                 src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221.jpg?raw=true"
@@ -878,7 +871,7 @@
               />
             </div>
 
-            <!-- Duplicate slider items for seamless loop -->
+             Duplicate slider items for seamless loop 
             <div class="slider-item">
               <img
                 src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221.jpg?raw=true"
@@ -988,10 +981,9 @@
         </div>
       </section>
 
-      <!-- Key Achievements -->
         <!-- Key Achievements -->
             <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 section-title">KEY ACHIEVEMENTS</h2>
+                <h2 class="text-2xl font-bold  section-title">Key Achievements</h2>
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg achievement-item">
                         <i class="fas fa-trophy text-blue-800 text-xl mb-2"></i>
@@ -1018,7 +1010,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="bg-gray-800 p-6 text-center text-gray-400">
+    <div  class="bg-gray-800 p-6 text-center text-gray-400 ">
       <div class="contact-info">
         <span><a href=""><i class="fas fa-phone-alt"></i> +201002003109</a></span>
         <span
